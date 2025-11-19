@@ -1,9 +1,9 @@
-import { useState } from "react";
+import useSavedState from "../utils/useSavedState";
 import reactLogo from "/react.svg";
 import viteLogo from "/vite.svg";
 
 export default function HomePage() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useSavedState("count", 0);
 
   return (
     <>
