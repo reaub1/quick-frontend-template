@@ -1,9 +1,9 @@
-import useSavedState from "../utils/useSavedState";
+import { useApp } from "../AppContext";
 import reactLogo from "/react.svg";
 import viteLogo from "/vite.svg";
 
 export default function HomePage() {
-  const [count, setCount] = useSavedState("count", 0);
+  const { count, setCount, showMessage } = useApp();
 
   return (
     <>
@@ -17,7 +17,12 @@ export default function HomePage() {
       </div>
       <h1>Quick Frontend Template</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button
+          onClick={() => {
+            setCount((count) => count + 1);
+            showMessage(`Count increased to ${count + 1}`);
+          }}
+        >
           count is {count}
         </button>
         <p>
