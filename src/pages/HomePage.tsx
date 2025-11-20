@@ -1,12 +1,10 @@
-import { useApp } from "../AppContext";
 import reactLogo from "/react.svg";
 import viteLogo from "/vite.svg";
 import testData from "../data/test.json";
-import { Box, Button, Link, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
+import CountButton from "../components/CountButton";
 
 export default function HomePage() {
-  const { count, setCount, showMessage } = useApp();
-
   return (
     <>
       <Box>
@@ -19,15 +17,7 @@ export default function HomePage() {
       </Box>
       <Typography variant="h3">{testData.name}</Typography>
       <Box>
-        <Button
-          variant="outlined"
-          onClick={() => {
-            setCount((count) => count + 1);
-            showMessage(`Count increased to ${count + 1}`);
-          }}
-        >
-          count is {count}
-        </Button>
+        <CountButton />
         <Typography>
           Edit <code>src/App.tsx</code> and save to test HMR
         </Typography>
