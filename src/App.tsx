@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from "react-router";
 import AppLayout from "./layout/AppLayout";
 import HomePage from "./pages/HomePage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
@@ -9,9 +10,9 @@ function App() {
 
       <Route path="/" element={<AppLayout />}>
         <Route path="home" element={<HomePage />} />
-      </Route>
 
-      <Route path="*" element={<Navigate to="/" />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
     </Routes>
   );
 }
