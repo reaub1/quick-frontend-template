@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "npm run dev"
+    "start": "vite"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -17,7 +17,8 @@
     "@mui/material": "^7.3.5",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-router": "^7.9.6"
+    "react-router": "^7.9.6",
+    "vite": "^7.2.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
